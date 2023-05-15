@@ -2229,23 +2229,23 @@ grml_prompt_post_default=(
 )
 
 grml_prompt_token_default=(
-    at                '@'
+    at                ''
     battery           'GRML_BATTERY_LEVEL'
     change-root       'debian_chroot'
     date              '%D{%Y-%m-%d}'
     grml-chroot       'GRML_CHROOT'
     history           '{history#%!} '
-    host              '%m '
+    host              ''
     jobs              '[%j running job(s)] '
     newline           $'\n'
     path              '%40<..<%~%<< '
-    percent           '%# '
+    percent           ' '
     rc                '%(?..%? )'
     rc-always         '%?'
-    sad-smiley        '%(?..:()'
+    sad-smiley        '%(?..😿'
     shell-level       '%(3L.+ .)'
     time              '%D{%H:%M:%S} '
-    user              '%n'
+    user              '🐾'
     vcs               '0'
 )
 
@@ -6776,7 +6776,7 @@ export MOZ_ACCELERATED=1
 export MOZ_DBUS_REMOTE=1
 export MOZ_DISABLE_RDD_SANDBOX=1
 export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
-export QT_QPA_PLATFORMTHEME=qt5ct 
+export QT_QPA_PLATFORMTHEME=qt5ct
 export QT_QPA_PLATFORM=wayland
 export XDG_SESSION_DESKTOP=Hyprland
 export XDG_CURRENT_DESKTOP=Hyprland
@@ -6794,6 +6794,7 @@ export ECORE_EVAS_ENGINE=wayland_egl
 export ELM_ENGINE=wayland_egl
 export VISUAL=nvim
 export EDITOR="$VISUAL"
+export LC_ALL=en_US.UTF-8
 
 if test -z "${XDG_RUNTIME_DIR}"; then
 	UID="$(id -u)"
@@ -6808,6 +6809,7 @@ alias emerge-update="sudo emerge --sync && sudo emerge --ask --verbose --update 
 
 
 alias ls='exa -la --icons'
+alias sudo='doas'
 alias grep='rg'
 alias htop='btm -baune'
 alias neofetch='freshfetch'
